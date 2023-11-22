@@ -1,0 +1,38 @@
+// 通用方法
+
+@import "../common/var.scss";
+
+// BEM
+// .x-button{}
+@mixin b($block) { //button
+  $B: $namespace + $common-separator + $block;// x-button
+
+  .#{$B} {//.x-button
+    @content;
+  }
+}
+// .x-button.is-xxx
+@mixin when($state) {
+  @at-root {//根 .x-button
+    &.#{$state-prefix + $state} {// is-state
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  @at-root {
+    #{&+$modifier-separator+$modifier} {
+      @content;
+    }
+  }
+}
+
+
+@mixin e($element) {
+  @at-root {
+    #{&+$element-separator+$element} {
+      @content;
+    }
+  }
+}

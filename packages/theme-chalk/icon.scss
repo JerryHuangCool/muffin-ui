@@ -1,0 +1,38 @@
+@import "./common/var.scss";
+@import "./mixins/mixin.scss";
+
+@font-face {
+  font-family: "muffin-iconfont"; /* Project id 4341922 */
+  src: url('./fonts/iconfont.woff2') format('woff2'),
+       url('./fonts/iconfont.woff') format('woff'),
+       url('./fonts/iconfont.ttf') format('truetype');
+}
+
+//用一个方法不需要同时设置两个类
+[class^='#{$namespace}-icon-'] {
+  font-family: "muffin-iconfont" !important;
+  font-size: 26px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.muffin-icon-jiazai:before {
+  content: "\e629";
+}
+
+.muffin-icon-jiazai1:before {
+  content: "\e668";
+}
+
+.muffin-icon-jiazai2:before {
+  content: "\e603";
+}
+
+.muffin-icon-jiazai3:before {
+  content: "\e60f";
+}
+
+.muffin-icon-muffin_F:before {
+  content: "\e60b";
+}
