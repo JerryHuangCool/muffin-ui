@@ -1,0 +1,81 @@
+@import "./common/var.scss";
+@import "./mixins/mixin.scss";
+
+//bem 创建样式
+
+//(1) muffin-button
+
+@include b(button){
+  //样式
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color:#606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline:none;
+  margin:0;
+  transition: 0.1s;
+  font-weight: 500;
+  // 禁止元素的文字被选中
+  user-select: none;
+  padding:12px 20px;
+  font-size:14px;
+  border-radius:4px;
+  &:hover,
+  &:focus{
+    color:#f8f9ea;
+    border-color:#f8f9ea;
+    background-color: #f8ccc6;
+  }
+
+  & [class*='#{$namespace}-icon-'] {
+    & + span {
+      margin-left: 5px;
+    }
+  }
+  //状态  when
+  @include when(disabled){
+    cursor: no-drop;
+    opacity: 0.6;
+  }
+  @include when(round){
+    border-radius: 20px;
+    padding: 12px 23px;
+  }
+  @include when(circle){
+    border-radius: 50%;
+    padding: 12px;
+  }
+  @include when(loading){
+    pointer-events: none;
+  }
+  @include m(primary){
+    @include button-type($--color-white,#66b1ff,$--color-primary);
+    @include plain($--color-white,$--color-primary);
+  }
+  @include m(success){
+    @include button-type($--color-white,#85ce61,$--color-success);
+    @include plain($--color-white,$--color-success); 
+  }
+  @include m(warining){
+    @include button-type($--color-white,#ebb563,$--color-warining);
+    @include plain($--color-white,$--color-warining);   
+  }
+  @include m(danger){
+    @include button-type($--color-white,#f78989,$--color-danger);
+    @include plain($--color-white,$--color-danger);    
+  }
+  @include m(muffin){
+    @include button-type($--color-white,#f8ccc6,$--color-muffin);
+    @include plain($--color-white,$--color-muffin);    
+  }
+  @include m(nuts){
+    @include button-type($--color-white,#e78d69,$--color-nuts);
+    @include plain($--color-white,$--color-nuts);  
+  }
+}

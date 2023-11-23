@@ -36,3 +36,31 @@
     }
   }
 }
+
+//处理 plain
+@mixin plain($background, $border-color) {
+  @at-root {
+    &.is-plain {
+      box-shadow: unset;
+      &:hover,
+      &:focus {
+        background: $background;
+        border-color: $border-color;
+        color: $border-color;
+      }
+    }
+  }
+}
+//处理button--type
+@mixin  button-type($color, $active-color,$background-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $background-color;
+  //   box-shadow: inset 3px 6px 10px #337ecc, inset -3px -7px 10px #4dbeff;
+  &:hover,
+  &:focus {
+    background: $active-color;
+    background-color: $active-color;
+    color: $color;
+  }
+}
