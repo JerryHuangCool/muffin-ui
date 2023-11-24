@@ -17,6 +17,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.muffin-icon-right:before {
+  content: "\eb03";
+}
+
+.muffin-icon-up:before {
+  content: "\eb04";
+}
+
+.muffin-icon-left:before {
+  content: "\eb05";
+}
+
+.muffin-icon-down:before {
+  content: "\eb06";
+}
+
+.muffin-icon-doubleup:before {
+  content: "\eb0a";
+}
+
+.muffin-icon-doubledown:before {
+  content: "\eb0b";
+}
+
+.muffin-icon-change:before {
+  content: "\eb0d";
+}
+
+.muffin-icon-doubleleft:before {
+  content: "\eb0f";
+}
+
 .muffin-icon-jiazai:before {
   content: "\e629";
 }
@@ -35,4 +67,11 @@
 
 .muffin-icon-muffin_F:before {
   content: "\e60b";
+}
+.muffin-icon-jiantouzuo:before {
+  content: "\e628";
+}
+
+.muffin-icon-jiantouyou:before {
+  content: "\e62a";
 }

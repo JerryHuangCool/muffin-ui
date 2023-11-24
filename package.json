@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "typescript": "4.4.4",
-    "vue": "^3.2.36"
+    "vue": "^3.2.36",
+    "vue-router": "4"
   },
   "scripts": {
     "dev": "webpack serve --config ./src/webpack.config.js"
