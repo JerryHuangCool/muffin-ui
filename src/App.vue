@@ -21,6 +21,9 @@
         width: 20%;
         margin-right: 20px;
       }
+      .show {
+        flex:1;
+      }
     }
   }
 </style>
