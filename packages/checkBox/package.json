@@ -1,0 +1,29 @@
+{
+  "name": "@muffin-ui/check-box",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "JerryHuangCool <905056897@qq.com>",
+  "homepage": "https://github.com/JerryHuangCool/muffin-ui#readme",
+  "license": "ISC",
+  "main": "lib/checkBox.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://mirrors.cloud.tencent.com/npm/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JerryHuangCool/muffin-ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/JerryHuangCool/muffin-ui/issues"
+  }
+}
