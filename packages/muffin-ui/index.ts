@@ -6,6 +6,7 @@ import MuffCol from "@muffin-ui/col"
 import MuffRow from "@muffin-ui/row"
 import MuffCheckBox from "@muffin-ui/check-box"
 import MuffCheckBoxGroup from "@muffin-ui/check-box-group"
+import MuffTransfer from "@muffin-ui/transfer"
 import {App} from 'vue'
 const components = [
   MuffButton,
@@ -14,7 +15,8 @@ const components = [
   MuffCol,
   MuffRow,
   MuffCheckBox,
-  MuffCheckBoxGroup
+  MuffCheckBoxGroup,
+  MuffTransfer
 ]
 
 const install = (app:App) => {

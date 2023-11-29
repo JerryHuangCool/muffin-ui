@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import {useCheckBoxProps} from './useCheckBoxProps.ts'
+import {useCheckBoxProps} from './useCheckBoxProps'
 export default defineComponent({
   name: 'MuffCheckBox',
   props: {

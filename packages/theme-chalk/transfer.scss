@@ -1,0 +1,19 @@
+@import "./common/var.scss";
+@import "./mixins/mixin.scss";
+
+@include b(transfer) {
+  @include e(item) {
+    display: inline-block;
+    width: 200px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 0 20px;
+    li {
+      list-style: none;
+    }
+  }
+  @include e(buttons) {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

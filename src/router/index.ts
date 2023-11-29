@@ -2,6 +2,7 @@ import {createRouter, createWebHashHistory} from 'vue-router'
 import Button from '../components/button.vue'
 import Layout from '../components/layout.vue'
 import CheckBox from '../components/checkbox.vue'
+import Transfer from '../components/transfer.vue'
 const routes = [
   {
     path:'/',
@@ -17,6 +18,11 @@ const routes = [
     path: '/checkbox',
     name: 'CheckBox',
     component: CheckBox
+  },
+  {
+    path: '/transfer',
+    name: 'Transfer',
+    component: Transfer
   }
 ]
 const router = createRouter({
