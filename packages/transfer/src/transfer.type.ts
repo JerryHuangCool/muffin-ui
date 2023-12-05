@@ -16,3 +16,8 @@ export interface TransferProps{
   props:Props//别名
 
 }
+
+export interface State {
+  checked:Array<boolean>,
+  allCheck:boolean
+}

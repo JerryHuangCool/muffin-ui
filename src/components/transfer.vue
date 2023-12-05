@@ -22,7 +22,7 @@ export default defineComponent({
   }
   return {
     transferData: generateData(),
-    rightValue: [1,4],
+    rightValue: ref([1,4]),
     transferProps: {
       key: 'key',
       label: 'label',

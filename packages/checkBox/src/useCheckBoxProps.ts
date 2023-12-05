@@ -33,7 +33,7 @@ function useEvent() {
   const {emit} = getCurrentInstance()
   function handelChange(e) {
     const target = e.target
-    const value = target.isChecked? true: false
+    const value = target.checked? true: false
     emit('change',value)
   }
   return handelChange

@@ -5,6 +5,7 @@
   @include e(item) {
     display: inline-block;
     width: 200px;
+    vertical-align: middle;
     border: 1px solid grey;
     border-radius: 10px;
     margin: 0 20px;
@@ -15,5 +16,9 @@
   @include e(buttons) {
     display: inline-block;
     margin-right: 10px;
+  }
+  @include e(body) {
+    height: 200px;
+    overflow: scroll;
   }
 }
