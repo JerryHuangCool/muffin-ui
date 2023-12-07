@@ -3,6 +3,7 @@ import Button from '../components/button.vue'
 import Layout from '../components/layout.vue'
 import CheckBox from '../components/checkbox.vue'
 import Transfer from '../components/transfer.vue'
+import Message from '../components/message.vue'
 const routes = [
   {
     path:'/',
@@ -23,6 +24,11 @@ const routes = [
     path: '/transfer',
     name: 'Transfer',
     component: Transfer
+  },
+  {
+    path: '/message',
+    name: 'Message',
+    component: Message
   }
 ]
 const router = createRouter({

@@ -1,6 +1,6 @@
 <template>
   <div class="muffin-transfer__item">
-    <MuffCheckBox label="全选/半选" @change="handleChange" v-model="allCheck" ></MuffCheckBox>
+    <MuffCheckBox label="全选/反选" @change="handleChange" v-model="allCheck" ></MuffCheckBox>
     <div class="muffin-transfer__body">
     <MuffCheckBoxGroup v-model="checked">
       <MuffCheckBox v-for="item in data" :key="item[keyProps]" :label="item[keyProps]" :disabled="item[disabledProps]"></MuffCheckBox>
