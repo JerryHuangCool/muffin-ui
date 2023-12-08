@@ -4,6 +4,7 @@ import Layout from '../components/layout.vue'
 import CheckBox from '../components/checkbox.vue'
 import Transfer from '../components/transfer.vue'
 import Message from '../components/message.vue'
+import DropDown from '../components/dropdown.vue'
 const routes = [
   {
     path:'/',
@@ -29,6 +30,11 @@ const routes = [
     path: '/message',
     name: 'Message',
     component: Message
+  },
+  {
+    path: '/dropdown',
+    name: "DropDown",
+    component: DropDown
   }
 ]
 const router = createRouter({

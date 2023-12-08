@@ -8,6 +8,9 @@ import MuffCheckBox from "@muffin-ui/check-box"
 import MuffCheckBoxGroup from "@muffin-ui/check-box-group"
 import MuffTransfer from "@muffin-ui/transfer"
 import  Message from '@muffin-ui/message'
+import MuffDropdown from '@muffin-ui/dropDown'
+import MuffDropdownItem from '@muffin-ui/dropdown-item'
+import MuffDropdownMenu from '@muffin-ui/dropdown-menu'
 import {App} from 'vue'
 const components = [
   MuffButton,
@@ -17,7 +20,10 @@ const components = [
   MuffRow,
   MuffCheckBox,
   MuffCheckBoxGroup,
-  MuffTransfer
+  MuffTransfer,
+  MuffDropdown,
+  MuffDropdownItem,
+  MuffDropdownMenu
 ]
 
 const install = (app:App) => {
