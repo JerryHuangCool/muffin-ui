@@ -1,0 +1,54 @@
+@import "./common/var.scss";
+@import "./mixins/mixin.scss";
+
+@include b(dropdownItem) {
+  transition: all .2s;
+    box-sizing: border-box;
+    padding: 0 20px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    .divided {
+      border-top: 1.5px solid rgba(192, 192, 192, 0.719);
+    }
+    .disabled{
+        color: rgba(127, 128, 131, 0.507);
+        &:hover{
+          background-color: #fff;
+          color: rgba(127, 128, 131, 0.507);
+          cursor: not-allowed;
+        }
+    }
+    @include m(primary){
+      &:hover{
+        color: $--color-primary;
+      }
+    }
+    @include m(success){
+      &:hover{
+        color: $--color-success;
+      }
+    }
+    @include m(warining){
+      &:hover{
+        color: $--color-warining;
+      }
+    }
+    @include m(danger){
+      &:hover{
+        color: $--color-danger;
+      }
+    }
+    @include m(muffin){
+      &:hover{
+        color: $--color-muffin;
+      }
+    }
+    @include m(nuts){
+      &:hover{
+        color:$--color-nuts;
+      }
+    }
+}
+

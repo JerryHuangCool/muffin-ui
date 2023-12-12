@@ -1,11 +1,12 @@
 <template>
-  <div class="dropdownItem" @click="alertItem" :class="{divided: isDivided,disabled: isDisabled}">
+  <div  @click="alertItem" :class="[{divided: isDivided,disabled: isDisabled},classs[0],classs[1]]">
       <slot></slot>
   </div>
   </template>
   
   <script lang="ts">
-  import {defineComponent, ref, onMounted} from 'vue'
+  import {defineComponent, ref, onMounted, PropType, computed} from 'vue'
+  type dropType = "primary" | "success" | "warining" | "danger" | "info" | "muffin" | "nuts"
   export default defineComponent({
     name: 'MuffDropDownItem',
     props: {
@@ -17,9 +18,24 @@
       },
       disabled: {
         type: Boolean
+      },
+      type: {
+        type: String as PropType<dropType>,
+            //校验
+            validator: (val: string) => {
+                return ["primary", "success", "warining", "danger", "info", "muffin", "nuts"].includes(val);
+            },
+            default: 'primary'
       }
     },
     setup(props){
+      const classs = computed(() => {
+            return [
+                'muffin-dropdownItem',
+                //动态的样式
+                'muffin-dropdownItem--' + props.type,
+            ];
+        });
       const isDivided = ref(false)
       const isDisabled = ref(false)
       function alertItem () {
@@ -44,35 +60,11 @@
       return {
         isDivided,
         isDisabled,
-        alertItem
+        alertItem,
+        classs
        
       }
     }
   })
   </script>
   
-  <style lang="scss" scoped>
-  .dropdownItem{
-      box-sizing: border-box;
-      padding: 0 20px;
-      height: 40px;
-      text-align: center;
-      line-height: 40px;
-      cursor: pointer;
-      &:hover{
-        background-color: rgb(236,245,255);
-        color: rgb(102,177,255);
-      }
-  }
-  .divided{
-    border-top: 1.5px solid rgba(192, 192, 192, 0.719);
-  }
-  .disabled{
-      color: rgba(127, 128, 131, 0.507);
-      &:hover{
-        background-color: #fff;
-        color: rgba(127, 128, 131, 0.507);
-        cursor: not-allowed;
-      }
-  }
-  </style>

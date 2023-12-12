@@ -4,45 +4,90 @@
 @include b(dropdown) {
   position: relative;
   display: inline-block;
-  #btn{
+.fade-enter-active {
+  animation: fade .1s;
+}
+.fade-leave-active {
+  animation: fade .2s reverse;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#btn{
+  position: relative;
+  width: 100px;
+  &::after{
+    content: 'sry';
+    color: transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
     width: 100px;
-    &::after{
-      content: 'sry';
-      color: transparent;
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      display: block;
-      width: 150px;
-    }
   }
-  .text{
+}
+.text{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  user-select: none;
+  padding:0px 20px;
+  white-space: nowrap;
+  font-size:14px;
+  span{
     display: inline-block;
-    cursor: pointer;
-    color: #409eff;
-    text-align: center;
-    font-weight: 500;
-    user-select: none;
-    padding:0px 20px;
-    white-space: nowrap;
-    font-size:14px;
-    span{
-      display: inline-block;
-      transform: rotate(90deg);
-      margin-left: 3px;
-    }
-    &::after{
-      content: 'sry';
-      color: transparent;
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      display: block;
-      width: 150px;
+    transform: rotate(90deg);
+    margin-left: 3px;
   }
-    ::v-deep .dropdownMenu{
-      top: 30px;
-      // bottom: -30px;
+  &::after{
+    content: 'sry';
+    color: transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
+    width: 100px;
+}
+  ::v-deep .dropdownMenu{
+    top: 30px;
+    // bottom: -30px;
+  }
+}
+  @include m(primary){
+    .text {
+      color: $--color-primary;
+    }
+  }
+  @include m(success){
+    .text {
+      color: $--color-success;
+    }
+  }
+  @include m(warining){
+    .text {
+      color: $--color-warining;
+    }
+  }
+  @include m(danger){
+    .text {
+      color: $--color-danger;
+    }
+  }
+  @include m(muffin){
+    .text {
+      color: $--color-muffin;
+    } 
+  }
+  @include m(nuts){
+    .text {
+      color: $--color-nuts;
     }
   }
 }
