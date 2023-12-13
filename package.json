@@ -30,6 +30,9 @@
     "vue-router": "4"
   },
   "scripts": {
-    "dev": "webpack serve --config ./src/webpack.config.js"
+    "dev": "webpack serve --config ./src/webpack.config.js",
+    "build:esm": "rollup -c ./build/rollup.config.bundle.js",
+    "build": "webpack --config ./build/webpack.config.js",
+    "build:esm:single": "rollup -c ./build/rollup.config.bundle.single.js"
   }
 }

@@ -10,10 +10,9 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, PropType, ref} from 'vue'
+import {defineComponent, ref} from 'vue'
 import MuffTransferItem from './transferItem.vue'
 import MuffButton from '@muffin-ui/button'
-import {TransferProps} from './transfer.type'
 import {useTransferData} from './useTransferData'
 export default defineComponent({
     name:'MuffTransfer',
@@ -23,7 +22,7 @@ export default defineComponent({
     },
     props: {
         data: {
-            type: Array as PropType<TransferProps>
+            type: Array
         },
         props: {
             type: Object
